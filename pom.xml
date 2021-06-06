@@ -3,7 +3,31 @@
   <groupId>8.30AppiumMayBatch</groupId>
   <artifactId>8.30AppiumMayBatch</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  
+  <build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-compiler-plugin</artifactId>
+<version>2.5.1</version>
+<configuration>
+<encoding>UTF-8</encoding>
+<source>1.6</source>
+<target>1.6</target>
+</configuration>
+</plugin>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>2.21.0</version>
+ <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>src/main/resources/TestRunner.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>  
+
+</plugin>
+</plugins>
+</build>
   <dependencies>
   
   <dependency>
@@ -11,13 +35,12 @@
     <artifactId>java-client</artifactId>
     <version>7.3.0</version>
 </dependency>
-
-<dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.1.0</version>
-    <scope>test</scope>
-</dependency>
+              <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
+            <scope>test</scope>
+        </dependency>
  
   </dependencies>
   
